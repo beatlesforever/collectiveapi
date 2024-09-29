@@ -20,10 +20,9 @@ from chakra.et_def.et_def_pb2 import (
     GlobalMetadata
 )
 
-# collective_size = int(1024 * 1024) # Bytes
 HARDCODE_LOCAL_BW = 50
+# HARDCODED. Refer to PacketBundle::call.
 # 1000 b/c microsecond to nanosecond. Refer to Workload::issue_replay
-## HARDCODED. REMOVE WHEN IMPLEMENT COLLECTIVE API
 def calculate_comp_time(data_size): 
     return int(3 * int(data_size / HARDCODE_LOCAL_BW) / 1000)
 

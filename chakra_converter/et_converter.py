@@ -6,7 +6,7 @@ import sys
 import traceback
 
 from logging import FileHandler
-from .mscclang2chakra_converter import MSCCL2ChakraConverter
+from mscclang2chakra_converter import MSCCL2ChakraConverter
 
 def get_logger(log_filename: str) -> logging.Logger:
     formatter = logging.Formatter(
@@ -49,24 +49,6 @@ def main() -> None:
         default=None,
         required=True,
         help="Output Chakra execution trace filename")
-    parser.add_argument(
-        "--num_dims",
-        type=int,
-        default=None,
-        required=True,
-        help="Number of dimensions in the network topology")
-    parser.add_argument(
-        "--num_npus",
-        type=int,
-        default=None,
-        required="Text" in sys.argv,
-        help="Number of NPUs in a system")
-    parser.add_argument(
-        "--num_passes",
-        type=int,
-        default=None,
-        required="Text" in sys.argv,
-        help="Number of training passes")
     parser.add_argument(
         "--log_filename",
         type=str,

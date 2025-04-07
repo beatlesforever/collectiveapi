@@ -1,0 +1,114 @@
+====================
+ SYSTEM CONFIGURATION 
+====================
+{
+  "scheduling-policy": "LIFO",
+  "endpoint-delay": 10,
+  "active-chunks-per-dimension": 1,
+  "preferred-dataset-splits": 1,
+  "all-reduce-implementation": ["ring"],
+  "all-gather-implementation": ["halvingDoubling"],
+  "reduce-scatter-implementation": ["halvingDoubling"],
+  "all-to-all-implementation": ["direct"],
+  "collective-optimization": "localBWAware",
+  "local-mem-bw": 50,
+  "boost-mode": 0
+}
+
+
+====================
+ MEMORY CONFIGURATION 
+====================
+{
+  "memory-type": "NO_MEMORY_EXPANSION"
+}
+
+
+====================
+ LOGICAL TOPOLOGY CONFIGURATION 
+====================
+{
+    "logical-dims": ["8"]
+}
+
+
+====================
+ TOPOLOGY FILE (/home/zhr/Desktop/collectiveapi/astra-sim/build/astra_ns3/../../extern/network_backend/ns-3/scratch/config/../../scratch/topology/910b_topology.txt) 
+====================
+8 0 28
+
+0 1 448Gbps 0.0005ms 0
+0 2 448Gbps 0.0005ms 0
+0 3 448Gbps 0.0005ms 0
+0 4 448Gbps 0.0005ms 0
+0 5 448Gbps 0.0005ms 0
+0 6 448Gbps 0.0005ms 0
+0 7 448Gbps 0.0005ms 0
+1 2 448Gbps 0.0005ms 0
+1 3 448Gbps 0.0005ms 0
+1 4 448Gbps 0.0005ms 0
+1 5 448Gbps 0.0005ms 0
+1 6 448Gbps 0.0005ms 0
+1 7 448Gbps 0.0005ms 0
+2 3 448Gbps 0.0005ms 0
+2 4 448Gbps 0.0005ms 0
+2 5 448Gbps 0.0005ms 0
+2 6 448Gbps 0.0005ms 0
+2 7 448Gbps 0.0005ms 0
+3 4 448Gbps 0.0005ms 0
+3 5 448Gbps 0.0005ms 0
+3 6 448Gbps 0.0005ms 0
+3 7 448Gbps 0.0005ms 0
+4 5 448Gbps 0.0005ms 0
+4 6 448Gbps 0.0005ms 0
+4 7 448Gbps 0.0005ms 0
+5 6 448Gbps 0.0005ms 0
+5 7 448Gbps 0.0005ms 0
+6 7 448Gbps 0.0005ms 0
+
+
+Comm_1024: 14248 cycles
+--------------------------------------
+Comm_2048: 14339 cycles
+--------------------------------------
+Comm_4096: 14514 cycles
+--------------------------------------
+Comm_8192: 14850 cycles
+--------------------------------------
+Comm_16384: 15522 cycles
+--------------------------------------
+Comm_32768: 16901 cycles
+--------------------------------------
+Comm_65536: 19659 cycles
+--------------------------------------
+Comm_131072: 25161 cycles
+--------------------------------------
+Comm_262144: 36179 cycles
+--------------------------------------
+Comm_524288: 58194 cycles
+--------------------------------------
+Comm_1048576: 102245 cycles
+--------------------------------------
+Comm_2097152: 190312 cycles
+--------------------------------------
+Comm_4194304: 366481 cycles
+--------------------------------------
+Comm_8388608: 718805 cycles
+--------------------------------------
+Comm_16777216: 1423453 cycles
+--------------------------------------
+Comm_33554432: 13155314 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_67108864 after 60s!
+Comm_67108864: 5651306 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_134217728 after 60s!
+WARNING: No cycle results found for Comm_134217728 after 120s!
+Comm_134217728: 11288448 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_268435456 after 60s!
+WARNING: No cycle results found for Comm_268435456 after 120s!
+WARNING: No cycle results found for Comm_268435456 after 240s!
+Comm_268435456: 22562732 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_536870912 after 60s!

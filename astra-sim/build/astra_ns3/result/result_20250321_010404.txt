@@ -1,0 +1,457 @@
+====================
+ SYSTEM CONFIGURATION 
+====================
+{
+  "scheduling-policy": "LIFO",
+  "endpoint-delay": 10,
+  "active-chunks-per-dimension": 3,
+  "preferred-dataset-splits": 4,
+  "all-reduce-implementation": ["direct"],
+  "all-gather-implementation": ["halvingDoubling"],
+  "reduce-scatter-implementation": ["halvingDoubling"],
+  "all-to-all-implementation": ["direct"],
+  "collective-optimization": "localBWAware",
+  "local-mem-bw": 50,
+  "boost-mode": 0
+}
+
+
+====================
+ MEMORY CONFIGURATION 
+====================
+{
+  "memory-type": "NO_MEMORY_EXPANSION"
+}
+
+
+====================
+ LOGICAL TOPOLOGY CONFIGURATION 
+====================
+{
+    "logical-dims": ["8"]
+}
+
+
+====================
+ TOPOLOGY FILE (/home/zhr/Desktop/collectiveapi/astra-sim/build/astra_ns3/../../extern/network_backend/ns-3/scratch/config/../../scratch/topology/dgx1_nvlink_topology.txt) 
+====================
+14 6 29
+8 9 10 11 12 13
+0 1 200Gbps 0.005ms 0
+0 2 200Gbps 0.005ms 0
+0 3 400Gbps 0.005ms 0
+0 4 400Gbps 0.005ms 0
+1 2 400Gbps 0.005ms 0
+1 3 200Gbps 0.005ms 0
+1 5 400Gbps 0.005ms 0
+2 3 400Gbps 0.005ms 0
+2 6 200Gbps 0.005ms 0
+3 7 200Gbps 0.005ms 0
+4 5 200Gbps 0.005ms 0
+4 6 200Gbps 0.005ms 0
+4 7 400Gbps 0.005ms 0
+5 6 400Gbps 0.005ms 0
+5 7 200Gbps 0.005ms 0
+6 7 400Gbps 0.005ms 0
+8 2 128Gbps 0.005ms 0
+8 3 128Gbps 0.005ms 0
+9 0 128Gbps 0.005ms 0
+9 1 128Gbps 0.005ms 0
+10 4 128Gbps 0.005ms 0
+10 5 128Gbps 0.005ms 0
+11 6 128Gbps 0.005ms 0
+11 7 128Gbps 0.005ms 0
+12 8 128Gbps 0.005ms 0
+12 9 128Gbps 0.005ms 0
+13 10 128Gbps 0.005ms 0
+13 11 128Gbps 0.005ms 0
+12 13 128Gbps 0.005ms 0
+
+Comm_1024:
+200292 cycles
+200292 cycles
+200296 cycles
+200296 cycles
+200300 cycles
+200300 cycles
+200304 cycles
+200304 cycles
+--------------------------------------
+Comm_2048:
+200384 cycles
+200384 cycles
+200390 cycles
+200390 cycles
+200396 cycles
+200396 cycles
+200402 cycles
+200402 cycles
+--------------------------------------
+Comm_4096:
+200582 cycles
+200582 cycles
+200592 cycles
+200592 cycles
+200602 cycles
+200602 cycles
+200612 cycles
+200612 cycles
+--------------------------------------
+Comm_8192:
+200960 cycles
+200960 cycles
+200978 cycles
+200978 cycles
+200996 cycles
+200996 cycles
+201014 cycles
+201014 cycles
+--------------------------------------
+Comm_16384:
+201710 cycles
+201710 cycles
+201744 cycles
+201744 cycles
+201778 cycles
+201778 cycles
+201812 cycles
+201812 cycles
+--------------------------------------
+Comm_32768:
+207177 cycles
+207177 cycles
+207181 cycles
+207181 cycles
+207214 cycles
+207214 cycles
+207299 cycles
+207299 cycles
+--------------------------------------
+Comm_65536:
+213444 cycles
+213444 cycles
+213484 cycles
+213484 cycles
+213534 cycles
+213534 cycles
+213604 cycles
+213604 cycles
+--------------------------------------
+Comm_131072:
+226214 cycles
+226214 cycles
+226222 cycles
+226222 cycles
+226239 cycles
+226239 cycles
+226328 cycles
+226328 cycles
+--------------------------------------
+Comm_262144:
+251735 cycles
+251735 cycles
+251763 cycles
+251763 cycles
+251786 cycles
+251786 cycles
+251823 cycles
+251823 cycles
+--------------------------------------
+Comm_524288:
+300521 cycles
+300521 cycles
+300570 cycles
+300570 cycles
+300596 cycles
+300596 cycles
+300622 cycles
+300622 cycles
+--------------------------------------
+Comm_1048576:
+399635 cycles
+399635 cycles
+399735 cycles
+399735 cycles
+399785 cycles
+399785 cycles
+399835 cycles
+399835 cycles
+--------------------------------------
+Comm_2097152:
+609369 cycles
+609369 cycles
+609394 cycles
+609394 cycles
+609430 cycles
+609430 cycles
+609466 cycles
+609466 cycles
+--------------------------------------
+Comm_4194304:
+1038107 cycles
+1038107 cycles
+1038382 cycles
+1038382 cycles
+1038395 cycles
+1038395 cycles
+1038501 cycles
+1038501 cycles
+--------------------------------------
+Comm_8388608:
+1881538 cycles
+1881538 cycles
+1881561 cycles
+1881561 cycles
+1881569 cycles
+1881569 cycles
+1881632 cycles
+1881632 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_16777216 after 60s!
+Comm_16777216:
+3605319 cycles
+3605319 cycles
+3605443 cycles
+3605443 cycles
+3605481 cycles
+3605481 cycles
+3605530 cycles
+3605530 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_33554432 after 120s!
+Comm_33554432:
+7105553 cycles
+7105553 cycles
+7105719 cycles
+7105719 cycles
+7105793 cycles
+7105793 cycles
+7105846 cycles
+7105846 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_67108864 after 240s!
+Comm_67108864:
+14064072 cycles
+14064072 cycles
+14064120 cycles
+14064120 cycles
+14064144 cycles
+14064144 cycles
+14064168 cycles
+14064168 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_134217728 after 480s!
+Comm_134217728:
+28021378 cycles
+28021378 cycles
+28021459 cycles
+28021459 cycles
+28021507 cycles
+28021507 cycles
+28021543 cycles
+28021543 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_268435456 after 960s!
+Comm_268435456:
+55894357 cycles
+55894357 cycles
+55894586 cycles
+55894586 cycles
+55894672 cycles
+55894672 cycles
+55894715 cycles
+55894715 cycles
+--------------------------------------
+WARNING: No cycle results found for Comm_536870912 after 1920s!
+Comm_536870912:
+111646571 cycles
+111646571 cycles
+111646602 cycles
+111646602 cycles
+111646636 cycles
+111646636 cycles
+111646673 cycles
+111646673 cycles
+--------------------------------------
+All simulations completed! Sorting results by message size...
+Final sorted results:
+Comm_1024:
+200292 cycles
+200292 cycles
+200296 cycles
+200296 cycles
+200300 cycles
+200300 cycles
+200304 cycles
+200304 cycles
+Comm_2048:
+200384 cycles
+200384 cycles
+200390 cycles
+200390 cycles
+200396 cycles
+200396 cycles
+200402 cycles
+200402 cycles
+Comm_4096:
+200582 cycles
+200582 cycles
+200592 cycles
+200592 cycles
+200602 cycles
+200602 cycles
+200612 cycles
+200612 cycles
+Comm_8192:
+200960 cycles
+200960 cycles
+200978 cycles
+200978 cycles
+200996 cycles
+200996 cycles
+201014 cycles
+201014 cycles
+Comm_16384:
+201710 cycles
+201710 cycles
+201744 cycles
+201744 cycles
+201778 cycles
+201778 cycles
+201812 cycles
+201812 cycles
+Comm_32768:
+207177 cycles
+207177 cycles
+207181 cycles
+207181 cycles
+207214 cycles
+207214 cycles
+207299 cycles
+207299 cycles
+Comm_65536:
+213444 cycles
+213444 cycles
+213484 cycles
+213484 cycles
+213534 cycles
+213534 cycles
+213604 cycles
+213604 cycles
+Comm_131072:
+226214 cycles
+226214 cycles
+226222 cycles
+226222 cycles
+226239 cycles
+226239 cycles
+226328 cycles
+226328 cycles
+Comm_262144:
+251735 cycles
+251735 cycles
+251763 cycles
+251763 cycles
+251786 cycles
+251786 cycles
+251823 cycles
+251823 cycles
+Comm_524288:
+300521 cycles
+300521 cycles
+300570 cycles
+300570 cycles
+300596 cycles
+300596 cycles
+300622 cycles
+300622 cycles
+Comm_1048576:
+399635 cycles
+399635 cycles
+399735 cycles
+399735 cycles
+399785 cycles
+399785 cycles
+399835 cycles
+399835 cycles
+Comm_2097152:
+609369 cycles
+609369 cycles
+609394 cycles
+609394 cycles
+609430 cycles
+609430 cycles
+609466 cycles
+609466 cycles
+Comm_4194304:
+1038107 cycles
+1038107 cycles
+1038382 cycles
+1038382 cycles
+1038395 cycles
+1038395 cycles
+1038501 cycles
+1038501 cycles
+Comm_8388608:
+1881538 cycles
+1881538 cycles
+1881561 cycles
+1881561 cycles
+1881569 cycles
+1881569 cycles
+1881632 cycles
+1881632 cycles
+Comm_16777216:
+3605319 cycles
+3605319 cycles
+3605443 cycles
+3605443 cycles
+3605481 cycles
+3605481 cycles
+3605530 cycles
+3605530 cycles
+Comm_33554432:
+7105553 cycles
+7105553 cycles
+7105719 cycles
+7105719 cycles
+7105793 cycles
+7105793 cycles
+7105846 cycles
+7105846 cycles
+Comm_67108864:
+14064072 cycles
+14064072 cycles
+14064120 cycles
+14064120 cycles
+14064144 cycles
+14064144 cycles
+14064168 cycles
+14064168 cycles
+Comm_134217728:
+28021378 cycles
+28021378 cycles
+28021459 cycles
+28021459 cycles
+28021507 cycles
+28021507 cycles
+28021543 cycles
+28021543 cycles
+Comm_268435456:
+55894357 cycles
+55894357 cycles
+55894586 cycles
+55894586 cycles
+55894672 cycles
+55894672 cycles
+55894715 cycles
+55894715 cycles
+Comm_536870912:
+111646571 cycles
+111646571 cycles
+111646602 cycles
+111646602 cycles
+111646636 cycles
+111646636 cycles
+111646673 cycles
+111646673 cycles

@@ -1,0 +1,10 @@
+{
+    "scheduling-policy": "FIFO",
+    "endpoint-delay": 10,
+    "active-chunks-per-dimension": 1,
+    "preferred-dataset-splits": 2,
+    "all-reduce-implementation-chakra-experimental": ["/home/zhr/Desktop/collectiveapi/msccl-tools/allreduce_ring_mscclang"],
+    "collective-optimization": "localBWAware", 
+    "local-mem-bw": 50,
+    "boost-mode": 0
+}

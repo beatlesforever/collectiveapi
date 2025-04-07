@@ -1,0 +1,58 @@
+====================
+ SYSTEM CONFIGURATION 
+====================
+{
+  "scheduling-policy": "LIFO",
+  "endpoint-delay": 10,
+  "active-chunks-per-dimension": 1,
+  "preferred-dataset-splits": 1,
+  "all-reduce-implementation": ["direct"],
+  "all-gather-implementation": ["halvingDoubling"],
+  "reduce-scatter-implementation": ["halvingDoubling"],
+  "all-to-all-implementation": ["direct"],
+  "collective-optimization": "localBWAware",
+  "local-mem-bw": 50,
+  "boost-mode": 0
+}
+
+
+====================
+ MEMORY CONFIGURATION 
+====================
+{
+  "memory-type": "NO_MEMORY_EXPANSION"
+}
+
+
+====================
+ LOGICAL TOPOLOGY CONFIGURATION 
+====================
+{
+    "logical-dims": ["8"]
+}
+
+
+====================
+ TOPOLOGY FILE () 
+====================
+Topology file not found: /home/zhr/Desktop/collectiveapi/astra-sim/build/astra_ns3/../../extern/network_backend/ns-3/
+
+
+Simulation with Comm_8192 **timed out after 30 seconds**!
+Comm_8192: 2130 cycles
+--------------------------------------
+Simulation with Comm_16384 **timed out after 30 seconds**!
+Comm_16384: 2226 cycles
+--------------------------------------
+Simulation with Comm_32768 **timed out after 30 seconds**!
+Comm_32768: 2423 cycles
+--------------------------------------
+Simulation with Comm_65536 **timed out after 30 seconds**!
+Comm_65536: 2817 cycles
+--------------------------------------
+All simulations completed! Sorting results by message size...
+Final sorted results:
+Comm_8192: 2130 cycles
+Comm_16384: 2226 cycles
+Comm_32768: 2423 cycles
+Comm_65536: 2817 cycles

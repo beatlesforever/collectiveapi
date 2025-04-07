@@ -1,0 +1,1 @@
+DEBUG [03/08/2025 01:14:36 AM] /home/zhr/Desktop/collectiveapi/chakra_converter/et_converter.py --input_type msccl --input_filename ../msccl-tools/examples/mscclang/demo_allreduce.xml --output_filename ../msccl-tools/allreduce_ring_mscclang --coll_size 16384

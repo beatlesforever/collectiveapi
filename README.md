@@ -23,9 +23,11 @@ bash build/astra_analytical/build.sh
 ```
 
 ## Generating Workload ET
+
+
 ```
-cd extern/graph_frontend/chakra
-python3 -m utils.et_generator.et_generator --num_npus 64 --num_dims 1 --default_comm_size 16384
+cd ~/Desktop/collectiveapi/astra-sim/extern/graph_frontend
+python3 -m chakra.utils.et_generator.et_generator --num_npus 64 --num_dims 1 --default_comm_size 16384
 ```
 
 ## Generating Collective Algorithm ET
@@ -34,6 +36,7 @@ cd ../../../../msccl-tools
 python3 allreduce_a100_ring.py 64 1 1 > demo_allreduce.xml
 
 cd ../chakra
+
 python3 -m et_converter.et_converter \
         --input_type        msccl \
         --input_filename    ../msccl-tools/demo_allreduce.xml \
@@ -42,13 +45,26 @@ python3 -m et_converter.et_converter \
         --coll_size         16384'
 ```
 
+
+```
+cd ~/Desktop/collectiveapi/chakra_converter 
+
+python3 -m et_converter \
+        --input_type        msccl \
+        --input_filename    ../msccl-tools/examples/mscclang/demo_allreduce.xml \
+        --output_filename   ../msccl-tools/allreduce_ring_mscclang \
+        --coll_size         16384
+
+```
+
+
 ## Running the Simulation in ASTRA-sim
 ```
 cd ../astra-sim
 export SYSTEM_CONFIG="./inputs/system/Ring.json"
 export MEMORY_CONFIG="./inputs/remote_memory/analytical/no_memory_expansion.json"
-export WORKLOAD_CONFIG="./extern/graph_frontend/chakra/one_comm_coll_node_allreduce"
 export NETWORK_CONFIG="./inputs/network/analytical/Ring.yml"
+export WORKLOAD_CONFIG="./extern/graph_frontend/one_comm_coll_node_allreduce"
 
 # Run
 ./build/astra_analytical/build/bin/AstraSim_Analytical_Congestion_Unaware \

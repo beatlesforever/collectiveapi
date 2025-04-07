@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 
 import logging
-
+import sys
 from  xml.etree import ElementTree
 from typing import Any, List
+
+# 获取 `chakra` 目录的路径
+chakra_path = "/home/zhr/Desktop/collectiveapi/astra-sim/extern/graph_frontend"
+if chakra_path not in sys.path:
+    sys.path.append(chakra_path)
+
 from chakra.third_party.utils.protolib import encodeMessage as encode_message
 from chakra.et_def.et_def_pb2 import (
     NodeType,
